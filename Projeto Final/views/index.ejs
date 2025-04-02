@@ -4,26 +4,52 @@
         <meta charset=""UTF-8>
         <meta name="viewport" content="width=device-width, inicial-scalet=1.0">
         <title>Cadastro</title>
+        <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=""UTF-8>
+        <meta name="viewport" content="width=device-width, inicial-scalet=1.0">
+        <title>Cadastro</title>
+        <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=""UTF-8>
+        <meta name="viewport" content="width=device-width, inicial-scalet=1.0">
+        <title>Cadastro</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <link rel="stylesheet" href="/public/css/styles.css">
     </head>
     <body>
-       <div>
-        <h2>Cadastro de Produto</h2>
-        <button> Adicionar Produto</button>
-        <div>
-            <form action="">
-                <div>
-                    <label for="">descricao</label>
+       <div class="container at-5">
+        <h2 class="mb-4">Cadastro de Produto</h2>
+        <button id="addProductBtn" class="btn bt-primary mb-3"> Adicionar Produto</button>
+        <div id="productForm"style="display:name ;" class="card card-bdy mb-3">
+            <form action="/add" method="POST">
+                <div class="form-group">
+                    <label for="description">descricao</label>
                     <input type="text"id= "description"name= "description"class="form-control"required>
                 </div>
-                <div>
-                    <label for="">Valor</label>
-                    <input type="text" id="value" name="value" class="form-control"required>
-                    <button>salvar</button>
-                    <button>cancelar</button>
-                </div>
+                <div class="form-group">
+                      <label for="value">Valor</label>
+                     <input type="text" id="value" name="value" class="form-control"required>
+                </div> 
+                     <button type="submit" class="btn btn-sucess">salvar</button>
+                     <button type="button" id="cancelBtn" class="btn btn-secondary">cancelar</button>
+                
             </form>
         </div>
-       </div>
-    </body>
+        <div class="table-resposive">
+        <table>
+            <tr>   
+                <th> ID Produto</th> 
+                <th>Descriçao</th> 
+                <th>Valor</th>
+                <th>Açoes</th>
+            </tr> 
+           </table>
+           
+        </div>
+     </div>
+         </body>
 </html>
+       
